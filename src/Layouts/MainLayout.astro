@@ -1,0 +1,13 @@
+---
+import MainHeader from "./MainHeader.astro";
+
+const { title = "Default Title", description = "Default Description" } =
+  Astro.props;
+---
+
+<html lang="en">
+  <MainHeader {title} {description} />
+  <body>
+    <slot>--DETAULT TEXT--</slot>
+  </body>
+</html>
