@@ -1,0 +1,33 @@
+---
+import Link from "../components/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Page Not Found">
+  <section class="container" aria-label="About me">
+    <div
+      class="container"
+      style={{
+        display: "grid",
+        placeItems: "center",
+        textAlign: "center",
+        gap: "var(--space-sm)",
+      }}
+    >
+      <div style={{ display: "grid", justifyItems: "center" }}>
+        <h1 class="h1">WAHHH RETARD</h1>
+        <p>we seem to be in a sad state of conundrum</p>
+        <Link
+          href="/"
+          style="secondary"
+          text="Go Home"
+          
+          icon={{
+            name: "tabler:home",
+            side: "right",
+          }}
+        />
+      </div>
+    </div>
+  </section>
+</MainLayout>

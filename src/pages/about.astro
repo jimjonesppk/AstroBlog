@@ -1,7 +1,27 @@
 ---
+import Link from "../components/Link.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="About">
-  <h1>ABOUT HI</h1>
+<MainLayout title="About" description="Learn more about me, the author of this blog.">
+  <section class="container about" aria-label="About me">
+    <img src="/images/headshot.jpg" alt="A photo of me" />
+    <div class="content">
+      <h1 class="h1">About Me Or sum</h1>
+      <p>
+        I was born at a very young age. Since then, Ive dedicated my life to
+        perfecting the art of doing nothing, yet I am somehow exceptionally busy
+        in my own head. I once spent twenty minutes in an enclosed room alone
+        with a lion—granted, it was six weeks old with oversized paws, but Ive
+        been living off that adrenaline ever since. Im basically a walking,
+        talking, slightly chaotic, enigma-wrapped-in-a-puzzle
+      </p>
+      <br>
+      <Link
+        href="mailto:stanwinbenny2000@gmail.com"
+        style="primary"
+        text="Contact Me BAYEEBEE"
+      />
+    </div>
+  </section>
 </MainLayout>
