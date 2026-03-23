@@ -1,26 +1,11 @@
 ---
+import PostCard from "../../components/PostCard.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
+
+// const allPosts = await Astro.glob("/src/pages/blog/posts/*.md");d //Astro.glob is deprecated in newer Astro versions
+const allPosts = Object.values(import.meta.glob("./*.md", { eager: true }));
 ---
 
 <MainLayout title="My Blog">
-  <ul>
-    <li>
-      <a href="./post-1">Blog Post 1</a>
-    </li>
-    <li>
-      <a href="./post-2">Blog Post 2</a>
-    </li>
-    <li>
-      <a href="./post-3">Blog Post 3</a>
-    </li>
-    <li>
-      <a href="./post-4">Blog Post 4</a>
-    </li>
-    <li>
-      <a href="./post-5">Blog Post 5</a>
-    </li>
-    <li>
-      <a href="./post-6">Blog Post 6</a>
-    </li>
-  </ul>
+  {allPosts.map((post) => <PostCard {post} />)}
 </MainLayout>
